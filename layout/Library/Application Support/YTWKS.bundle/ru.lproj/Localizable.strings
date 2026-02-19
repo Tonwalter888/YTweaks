@@ -2,17 +2,17 @@
 "WARNING" = "Внимание";
 "APPLY_DESC" = "Данное действие приведет к принудительному закрытию YouTube. Продолжить?";
 
-// Fullscreen to the Right
-"FULLSCREEN_TO_THE_RIGHT" = "Полноэкранный режим вправо";
-"FULLSCREEN_TO_THE_RIGHT_DESC" = "Всегда входить в полноэкранный режим с кнопкой/панелью «Домой» справа.";
+// Fullscreen Mode
+"FULLSCREEN_MODE" = "Направление полноэкранного режима";
+"FULLSCREEN_MODE_DESC" = "Всегда входить в полноэкранный режим с кнопкой/панелью «Домой» слева или справа.";
 
-// Fullscreen to the Left
-"FULLSCREEN_TO_THE_LEFT" = "Полноэкранный режим влево";
-"FULLSCREEN_TO_THE_LEFT_DESC" = "Всегда входить в полноэкранный режим с верхней частью телефона справа.";
+"FULLSCREEN_OFF" = "Выкл";
+"FULLSCREEN_LEFT" = "Слева";
+"FULLSCREEN_RIGHT" = "Справа";
 
 // A/B Testing Settings
 "ENABLE_IOS_FLOATING_MINIPLAYER" = "Отключить плавающий мини-плеер";
-"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Отключает плавающий мини-плеер. Восстанавливает панель внизу.";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Восстанавливает классический мини-плеер путём отключения флага A/B enableIosFloatingMiniplayer. Требуется перезапуск приложения.";
 
 // Virtual Bezel
 "VIRTUAL_BEZEL" = "Виртуальные рамки полноэкранного режима";

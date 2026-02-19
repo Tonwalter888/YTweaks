@@ -1,0 +1,48 @@
+// Quit app alert
+"WARNING" = "Ostrzeżenie";
+"APPLY_DESC" = "Ta czynność zamknie YouTube. Czy na pewno chcesz kontynuować?";
+
+// Fullscreen Mode
+"FULLSCREEN_MODE" = "Wymuś kierunek pełnego ekranu";
+"FULLSCREEN_MODE_DESC" = "Zawsze wchodź w pełny ekran z przyciskiem/paskiem głównym po lewej lub prawej stronie.";
+"FULLSCREEN_OFF" = "Wyłącz";
+"FULLSCREEN_LEFT" = "Lewo";
+"FULLSCREEN_RIGHT" = "Prawo";
+
+// A/B Testing Settings
+"ENABLE_IOS_FLOATING_MINIPLAYER" = "Wyłącz pływający mini odtwarzacz";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Przywraca klasyczny mini odtwarzacz przez wyłączenie flagi A/B enableIosFloatingMiniplayer. Wymaga ponownego uruchomienia aplikacji.";
+
+// Virtual Bezel
+"VIRTUAL_BEZEL" = "Wirtualne ramki pełnego ekranu";
+"VIRTUAL_BEZEL_DESC" = "Dodaje niewidoczne strefy dotyku na czarnych paskach, aby zapobiec przypadkowym naciśnięciom i przewijaniu. Dla iPhone'ów bez przycisku głównego.";
+
+// Hide AI Summaries (Experimental)
+"HIDE_AI_SUMMARIES" = "Ukryj podsumowania AI (Eksperymentalne)";
+"HIDE_AI_SUMMARIES_DESC" = "Ukrywa przyciski podsumowań generowanych przez AI pod filmami w feedzie. Funkcja eksperymentalna.";
+
+// Fix Casting
+"FIX_CASTING" = "Napraw transmisję";
+"FIX_CASTING_DESC" = "Próbuje naprawić transmisję przez zmianę niektórych flag A/B. Działa tylko w wersji v20.10.4 lub niższej";
+
+// Preferences Management
+"PREFERENCES_MANAGEMENT" = "Zarządzanie preferencjami";
+"IMPORT_PREFERENCES" = "Importuj preferencje";
+"EXPORT_PREFERENCES" = "Eksportuj preferencje";
+"RESTORE_DEFAULTS" = "Przywróć ustawienia domyślne";
+"IMPORT_CONFIRM" = "To zastąpi bieżące preferencje. Kontynuować?";
+"RESTORE_CONFIRM" = "To zresetuje wszystkie ustawienia. Kontynuować?";
+"IMPORT_SUCCESS" = "Preferencje zaimportowane pomyślnie";
+"EXPORT_SUCCESS" = "Preferencje wyeksportowane pomyślnie";
+"IMPORT_FAILED" = "Nie udało się zaimportować preferencji";
+"CANCEL" = "Anuluj";
+"YES" = "Tak";
+
+// Night Mode
+"NIGHT_MODE" = "Tryb nocny";
+"NIGHT_MODE_DESC" = "Przyciemnia ekran poniżej minimalnej jasności nakładką ciemnego filtra.";
+"NIGHT_MODE_OFF" = "Wyłącz";
+"NIGHT_MODE_LOW" = "Niski";
+"NIGHT_MODE_MEDIUM" = "Średni";
+"NIGHT_MODE_HIGH" = "Wysoki";
+"NIGHT_MODE_MAXIMUM" = "Maks";

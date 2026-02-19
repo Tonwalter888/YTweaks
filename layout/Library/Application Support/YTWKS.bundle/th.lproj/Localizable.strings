@@ -2,17 +2,17 @@
 "WARNING" = "คำเตือน";
 "APPLY_DESC" = "การดำเนินการนี้จะปิด YouTube คุณแน่ใจหรือว่าต้องการดำเนินการต่อ?";
 
-// Fullscreen to the Right
-"FULLSCREEN_TO_THE_RIGHT" = "เต็มจอไปทางขวา";
-"FULLSCREEN_TO_THE_RIGHT_DESC" = "เข้าสู่โหมดเต็มหน้าจอโดยใช้ปุ่มหรือแถบหน้าแรกทางด้านขวาเสมอ";
+// Fullscreen Mode
+"FULLSCREEN_MODE" = "บังคับทิศทางเต็มจอ";
+"FULLSCREEN_MODE_DESC" = "เข้าสู่โหมดเต็มหน้าจอโดยใช้ปุ่มหรือแถบหน้าแรกทางด้านซ้ายหรือขวาเสมอ";
 
-// Fullscreen to the Left
-"FULLSCREEN_TO_THE_LEFT" = "เต็มจอไปทางซ้าย";
-"FULLSCREEN_TO_THE_LEFT_DESC" = "เข้าสู่โหมดเต็มหน้าจอโดยใช้ด้านบนขวาของโทรศัพท์เสมอ";
+"FULLSCREEN_OFF" = "ปิด";
+"FULLSCREEN_LEFT" = "ซ้าย";
+"FULLSCREEN_RIGHT" = "ขวา";
 
 // A/B Testing Settings
 "ENABLE_IOS_FLOATING_MINIPLAYER" = "ปิดใช้งานมินิเพลเยอร์ลอย";
-"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "ปิดใช้งานมินิเพลเยอร์ลอย คืนค่าแถบด้านล่างโดยปิดใช้งานแฟล็ก A/B enableIosFloatingMiniplayer ต้องรีสตาร์ทแอป";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "นำมินิเพลเยอร์แบบคลาสสิกกลับมาโดยปิดใช้งานแฟล็ก A/B enableIosFloatingMiniplayer ต้องรีสตาร์ทแอป";
 
 // Virtual Bezel
 "VIRTUAL_BEZEL" = "ขอบจอเต็มหน้าจอเสมือน";

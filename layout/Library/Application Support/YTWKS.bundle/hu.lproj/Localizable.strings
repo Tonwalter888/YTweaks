@@ -2,17 +2,17 @@
 "WARNING" = "Figyelem";
 "APPLY_DESC" = "Ez a művelet kilépteti a YouTube-ot. Biztosan folytatni szeretné?";
 
-// Fullscreen to the Right
-"FULLSCREEN_TO_THE_RIGHT" = "Teljes képernyő jobbra";
-"FULLSCREEN_TO_THE_RIGHT_DESC" = "Mindig jobb oldalon legyen a kezdőlap gomb/sáv, amikor teljes képernyős módba lép.";
+// Fullscreen Mode
+"FULLSCREEN_MODE" = "Teljes képernyő irányának kényszerítése";
+"FULLSCREEN_MODE_DESC" = "Mindig bal vagy jobb oldalon legyen a kezdőlap gomb/sáv, amikor teljes képernyős módba lép.";
 
-// Fullscreen to the Left
-"FULLSCREEN_TO_THE_LEFT" = "Teljes képernyő balra";
-"FULLSCREEN_TO_THE_LEFT_DESC" = "Mindig jobb oldalon legyen a telefon teteje, amikor teljes képernyős módba lép.";
+"FULLSCREEN_OFF" = "Ki";
+"FULLSCREEN_LEFT" = "Bal";
+"FULLSCREEN_RIGHT" = "Jobb";
 
 // A/B Testing Settings
 "ENABLE_IOS_FLOATING_MINIPLAYER" = "Lebegő minilejátszó kikapcsolása";
-"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Kikapcsolja a lebegő minilejátszót. Visszaállítja az alsó sávot.";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Visszaállítja a klasszikus minilejátszót az enableIosFloatingMiniplayer A/B jelző kikapcsolásával. Az alkalmazás újraindítása szükséges.";
 
 // Virtual Bezel
 "VIRTUAL_BEZEL" = "Virtuális teljes képernyős keretek";

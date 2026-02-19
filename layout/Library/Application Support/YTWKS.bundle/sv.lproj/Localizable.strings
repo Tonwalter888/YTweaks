@@ -1,0 +1,48 @@
+// Quit app alert
+"WARNING" = "Varning";
+"APPLY_DESC" = "Denna åtgärd avslutar YouTube. Är du säker på att du vill fortsätta?";
+
+// Fullscreen Mode
+"FULLSCREEN_MODE" = "Tvinga helskärmsriktning";
+"FULLSCREEN_MODE_DESC" = "Gå alltid in i helskärm med hemmaknappen/-fältet till vänster eller höger.";
+"FULLSCREEN_OFF" = "Av";
+"FULLSCREEN_LEFT" = "Vänster";
+"FULLSCREEN_RIGHT" = "Höger";
+
+// A/B Testing Settings
+"ENABLE_IOS_FLOATING_MINIPLAYER" = "Inaktivera flytande minispelare";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Återställer den klassiska minispelaren genom att inaktivera A/B-flaggan enableIosFloatingMiniplayer. Kräver omstart av appen.";
+
+// Virtual Bezel
+"VIRTUAL_BEZEL" = "Virtuella helskärmsramar";
+"VIRTUAL_BEZEL_DESC" = "Lägger till osynliga trygga touchzoner på de svarta fälten för att undvika misstag och hopp. För iPhone utan hemmaknapp.";
+
+// Hide AI Summaries (Experimental)
+"HIDE_AI_SUMMARIES" = "Dölj AI-sammanfattningar (Experimentell)";
+"HIDE_AI_SUMMARIES_DESC" = "Döljer AI-genererade sammanfattningsknappar under videor i flödet. Experimentell funktion.";
+
+// Fix Casting
+"FIX_CASTING" = "Åtgärda casting";
+"FIX_CASTING_DESC" = "Försöker åtgärda casting genom att ändra vissa A/B-flaggor. Fungerar endast i v20.10.4 eller lägre";
+
+// Preferences Management
+"PREFERENCES_MANAGEMENT" = "Hantering av preferenser";
+"IMPORT_PREFERENCES" = "Importera preferenser";
+"EXPORT_PREFERENCES" = "Exportera preferenser";
+"RESTORE_DEFAULTS" = "Återställ standardinställningar";
+"IMPORT_CONFIRM" = "Detta ersätter nuvarande preferenser. Fortsätta?";
+"RESTORE_CONFIRM" = "Detta återställer alla inställningar. Fortsätta?";
+"IMPORT_SUCCESS" = "Preferenser importerade";
+"EXPORT_SUCCESS" = "Preferenser exporterade";
+"IMPORT_FAILED" = "Import av preferenser misslyckades";
+"CANCEL" = "Avbryt";
+"YES" = "Ja";
+
+// Night Mode
+"NIGHT_MODE" = "Nattläge";
+"NIGHT_MODE_DESC" = "Dämpar skärmen under minsta ljusstyrka med ett mörkt filter.";
+"NIGHT_MODE_OFF" = "Av";
+"NIGHT_MODE_LOW" = "Låg";
+"NIGHT_MODE_MEDIUM" = "Medium";
+"NIGHT_MODE_HIGH" = "Hög";
+"NIGHT_MODE_MAXIMUM" = "Max";

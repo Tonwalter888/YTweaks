@@ -2,17 +2,17 @@
 "WARNING" = "Chú ý";
 "APPLY_DESC" = "Áp dụng thay đổi này sẽ khởi động lại YouTube. Bạn có muốn tiếp tục không?";
 
-// Fullscreen to the Right
-"FULLSCREEN_TO_THE_RIGHT" = "Toàn màn hình sang phải";
-"FULLSCREEN_TO_THE_RIGHT_DESC" = "Luôn vào chế độ toàn màn hình với nút/thanh trang chủ ở bên phải.";
+// Fullscreen Mode
+"FULLSCREEN_MODE" = "Buộc hướng toàn màn hình";
+"FULLSCREEN_MODE_DESC" = "Luôn vào chế độ toàn màn hình với nút/thanh trang chủ ở bên trái hoặc phải.";
 
-// Fullscreen to the Left
-"FULLSCREEN_TO_THE_LEFT" = "Toàn màn hình sang trái";
-"FULLSCREEN_TO_THE_LEFT_DESC" = "Luôn vào chế độ toàn màn hình với phần trên của điện thoại ở bên phải.";
+"FULLSCREEN_OFF" = "Tắt";
+"FULLSCREEN_LEFT" = "Trái";
+"FULLSCREEN_RIGHT" = "Phải";
 
 // A/B Testing Settings
 "ENABLE_IOS_FLOATING_MINIPLAYER" = "Tắt trình phát nhỏ nổi";
-"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Tắt trình phát nhỏ nổi. Khôi phục thanh ở dưới cùng.";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Khôi phục trình phát nhỏ cổ điển bằng cách tắt cờ A/B enableIosFloatingMiniplayer. Cần khởi động lại ứng dụng.";
 
 // Virtual Bezel
 "VIRTUAL_BEZEL" = "Viền toàn màn hình ảo";

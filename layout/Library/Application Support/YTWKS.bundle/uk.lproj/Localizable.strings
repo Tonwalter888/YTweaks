@@ -1,0 +1,48 @@
+// Quit app alert
+"WARNING" = "Попередження";
+"APPLY_DESC" = "Ця дія закриє YouTube. Продовжити?";
+
+// Fullscreen Mode
+"FULLSCREEN_MODE" = "Примусова орієнтація повноекранного режиму";
+"FULLSCREEN_MODE_DESC" = "Завжди входити в повноекранний режим з кнопкою/панеллю «Додому» зліва або справа.";
+"FULLSCREEN_OFF" = "Вимкнено";
+"FULLSCREEN_LEFT" = "Зліва";
+"FULLSCREEN_RIGHT" = "Справа";
+
+// A/B Testing Settings
+"ENABLE_IOS_FLOATING_MINIPLAYER" = "Вимкнути плаваючий міні-плеєр";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Відновлює класичний міні-плеєр, вимкнувши прапорець A/B enableIosFloatingMiniplayer. Потрібен перезапуск програми.";
+
+// Virtual Bezel
+"VIRTUAL_BEZEL" = "Віртуальні рамки повноекранного режиму";
+"VIRTUAL_BEZEL_DESC" = "Додає невидимі безпечні зони на чорних смугах, щоб уникнути випадкових натискань і пропусків. Для iPhone без кнопки «Додому».";
+
+// Hide AI Summaries (Experimental)
+"HIDE_AI_SUMMARIES" = "Приховати підсумки AI (Експериментально)";
+"HIDE_AI_SUMMARIES_DESC" = "Приховує кнопки підсумків, згенерованих ШІ, під відео в стрічці. Експериментальна функція.";
+
+// Fix Casting
+"FIX_CASTING" = "Виправити трансляцію";
+"FIX_CASTING_DESC" = "Намагається виправити трансляцію зміною деяких прапорців A/B. Працює лише на v20.10.4 або нижче";
+
+// Preferences Management
+"PREFERENCES_MANAGEMENT" = "Керування налаштуваннями";
+"IMPORT_PREFERENCES" = "Імпортувати налаштування";
+"EXPORT_PREFERENCES" = "Експортувати налаштування";
+"RESTORE_DEFAULTS" = "Відновити типові налаштування";
+"IMPORT_CONFIRM" = "Це замінить поточні налаштування. Продовжити?";
+"RESTORE_CONFIRM" = "Це скине всі налаштування. Продовжити?";
+"IMPORT_SUCCESS" = "Налаштування успішно імпортовано";
+"EXPORT_SUCCESS" = "Налаштування успішно експортовано";
+"IMPORT_FAILED" = "Не вдалося імпортувати налаштування";
+"CANCEL" = "Скасувати";
+"YES" = "Так";
+
+// Night Mode
+"NIGHT_MODE" = "Нічний режим";
+"NIGHT_MODE_DESC" = "Затемнює екран нижче мінімальної яскравості накладенням темного фільтра.";
+"NIGHT_MODE_OFF" = "Вимкнено";
+"NIGHT_MODE_LOW" = "Низький";
+"NIGHT_MODE_MEDIUM" = "Середній";
+"NIGHT_MODE_HIGH" = "Високий";
+"NIGHT_MODE_MAXIMUM" = "Макс";

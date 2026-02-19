@@ -2,17 +2,17 @@
 "WARNING" = "警告";
 "APPLY_DESC" = "この操作によりYouTubeアプリが終了します。本当に続けますか？";
 
-// Fullscreen to the Right
-"FULLSCREEN_TO_THE_RIGHT" = "フルスクリーンを右側に";
-"FULLSCREEN_TO_THE_RIGHT_DESC" = "常にホームボタン/バーが右側になるようにフルスクリーンに入ります。";
+// Fullscreen Mode
+"FULLSCREEN_MODE" = "フルスクリーン方向を強制";
+"FULLSCREEN_MODE_DESC" = "常にホームボタン/バーが左または右側になるようにフルスクリーンに入ります。";
 
-// Fullscreen to the Left
-"FULLSCREEN_TO_THE_LEFT" = "フルスクリーンを左側に";
-"FULLSCREEN_TO_THE_LEFT_DESC" = "常に電話の上部が右側になるようにフルスクリーンに入ります。";
+"FULLSCREEN_OFF" = "オフ";
+"FULLSCREEN_LEFT" = "左";
+"FULLSCREEN_RIGHT" = "右";
 
 // A/B Testing Settings
 "ENABLE_IOS_FLOATING_MINIPLAYER" = "フローティングミニプレーヤーを無効化";
-"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "フローティングミニプレーヤーを無効にします。下部のバーが復元されます。";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "A/Bフラグ enableIosFloatingMiniplayer を無効にしてクラシックミニプレーヤーを復元します。アプリの再起動が必要です。";
 
 // Virtual Bezel
 "VIRTUAL_BEZEL" = "仮想フルスクリーンベゼル";

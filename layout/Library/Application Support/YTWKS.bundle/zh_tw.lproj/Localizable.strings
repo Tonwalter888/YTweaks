@@ -2,17 +2,17 @@
 "WARNING" = "警告";
 "APPLY_DESC" = "需要重新啟動 Youtube，是否繼續？";
 
-// Fullscreen to the Right
-"FULLSCREEN_TO_THE_RIGHT" = "全螢幕向右";
-"FULLSCREEN_TO_THE_RIGHT_DESC" = "始終以主畫面按鈕/列在右側的方式進入全螢幕。";
+// Fullscreen Mode
+"FULLSCREEN_MODE" = "強制全螢幕方向";
+"FULLSCREEN_MODE_DESC" = "始終以主畫面按鈕/列在左側或右側的方式進入全螢幕。";
 
-// Fullscreen to the Left
-"FULLSCREEN_TO_THE_LEFT" = "全螢幕向左";
-"FULLSCREEN_TO_THE_LEFT_DESC" = "始終以手機頂部在右側的方式進入全螢幕。";
+"FULLSCREEN_OFF" = "關";
+"FULLSCREEN_LEFT" = "左";
+"FULLSCREEN_RIGHT" = "右";
 
 // A/B Testing Settings
 "ENABLE_IOS_FLOATING_MINIPLAYER" = "停用浮動迷你播放器";
-"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "停用浮動迷你播放器。恢復底部列。";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "透過停用 A/B 標誌 enableIosFloatingMiniplayer 恢復經典迷你播放器。需要重新啟動應用程式。";
 
 // Virtual Bezel
 "VIRTUAL_BEZEL" = "虛擬全螢幕邊框";

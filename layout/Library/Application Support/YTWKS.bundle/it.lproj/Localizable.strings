@@ -1,0 +1,48 @@
+// Quit app alert
+"WARNING" = "Attenzione";
+"APPLY_DESC" = "Questa azione chiuderà YouTube. Sei sicuro di voler continuare?";
+
+// Fullscreen Mode
+"FULLSCREEN_MODE" = "Forza direzione schermo intero";
+"FULLSCREEN_MODE_DESC" = "Entra sempre in schermo intero con il pulsante/barra home a sinistra o a destra.";
+"FULLSCREEN_OFF" = "Disattivato";
+"FULLSCREEN_LEFT" = "Sinistra";
+"FULLSCREEN_RIGHT" = "Destra";
+
+// A/B Testing Settings
+"ENABLE_IOS_FLOATING_MINIPLAYER" = "Disattiva mini player flottante";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Ripristina il mini player classico disattivando l'opzione A/B enableIosFloatingMiniplayer. Richiede riavvio dell'app.";
+
+// Virtual Bezel
+"VIRTUAL_BEZEL" = "Cornici virtuali schermo intero";
+"VIRTUAL_BEZEL_DESC" = "Aggiunge zone touch invisibili sulle barre nere per evitare tocchi e salti accidentali. Per iPhone senza pulsante home.";
+
+// Hide AI Summaries (Experimental)
+"HIDE_AI_SUMMARIES" = "Nascondi riepiloghi IA (Sperimentale)";
+"HIDE_AI_SUMMARIES_DESC" = "Nasconde i pulsanti di riepilogo generati dall'IA sotto i video nel feed. Funzione sperimentale.";
+
+// Fix Casting
+"FIX_CASTING" = "Ripara casting";
+"FIX_CASTING_DESC" = "Tenta di riparare il casting modificando alcune opzioni A/B. Funziona solo su v20.10.4 o precedente";
+
+// Preferences Management
+"PREFERENCES_MANAGEMENT" = "Gestione preferenze";
+"IMPORT_PREFERENCES" = "Importa preferenze";
+"EXPORT_PREFERENCES" = "Esporta preferenze";
+"RESTORE_DEFAULTS" = "Ripristina impostazioni predefinite";
+"IMPORT_CONFIRM" = "Questo sostituirà le preferenze attuali. Continuare?";
+"RESTORE_CONFIRM" = "Questo reimposterà tutte le impostazioni. Continuare?";
+"IMPORT_SUCCESS" = "Preferenze importate con successo";
+"EXPORT_SUCCESS" = "Preferenze esportate con successo";
+"IMPORT_FAILED" = "Importazione preferenze non riuscita";
+"CANCEL" = "Annulla";
+"YES" = "Sì";
+
+// Night Mode
+"NIGHT_MODE" = "Modalità notte";
+"NIGHT_MODE_DESC" = "Oscura lo schermo sotto la luminosità minima con un filtro scuro.";
+"NIGHT_MODE_OFF" = "Disattivato";
+"NIGHT_MODE_LOW" = "Basso";
+"NIGHT_MODE_MEDIUM" = "Medio";
+"NIGHT_MODE_HIGH" = "Alto";
+"NIGHT_MODE_MAXIMUM" = "Max";

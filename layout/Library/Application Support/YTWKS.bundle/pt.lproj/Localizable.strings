@@ -2,17 +2,17 @@
 "WARNING" = "Aviso";
 "APPLY_DESC" = "Esta ação encerrará o YouTube. Você tem certeza que quer continuar?";
 
-// Fullscreen to the Right
-"FULLSCREEN_TO_THE_RIGHT" = "Tela cheia para a direita";
-"FULLSCREEN_TO_THE_RIGHT_DESC" = "Sempre entrar em tela cheia com o botão/barra inicial à direita.";
+// Fullscreen Mode
+"FULLSCREEN_MODE" = "Forçar direção da tela cheia";
+"FULLSCREEN_MODE_DESC" = "Sempre entrar em tela cheia com o botão/barra inicial à esquerda ou à direita.";
 
-// Fullscreen to the Left
-"FULLSCREEN_TO_THE_LEFT" = "Tela cheia para a esquerda";
-"FULLSCREEN_TO_THE_LEFT_DESC" = "Sempre entrar em tela cheia com a parte superior do telefone à direita.";
+"FULLSCREEN_OFF" = "Desligado";
+"FULLSCREEN_LEFT" = "Esquerda";
+"FULLSCREEN_RIGHT" = "Direita";
 
 // A/B Testing Settings
 "ENABLE_IOS_FLOATING_MINIPLAYER" = "Desativar miniplayer flutuante";
-"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Desativa o miniplayer flutuante. Restaura a barra na parte inferior.";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Restaura o miniplayer clássico desativando o sinalizador A/B enableIosFloatingMiniplayer. Requer reinício do aplicativo.";
 
 // Virtual Bezel
 "VIRTUAL_BEZEL" = "Molduras virtuais de tela cheia";

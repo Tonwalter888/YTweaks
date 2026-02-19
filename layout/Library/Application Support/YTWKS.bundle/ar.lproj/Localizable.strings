@@ -2,17 +2,16 @@
 "WARNING" = "تحذير";
 "APPLY_DESC" = "سيؤدي هذا الإجراء إلى إغلاق التطبيق. هل أنت متأكد أنك تَوَد الاستمرار؟";
 
-// Fullscreen to the Right
-"FULLSCREEN_TO_THE_RIGHT" = "ملء الشاشة إلى اليمين";
-"FULLSCREEN_TO_THE_RIGHT_DESC" = "دخول وضع ملء الشاشة دائماً مع زر/شريط الصفحة الرئيسية على الجانب الأيمن.";
-
-// Fullscreen to the Left
-"FULLSCREEN_TO_THE_LEFT" = "ملء الشاشة إلى اليسار";
-"FULLSCREEN_TO_THE_LEFT_DESC" = "دخول وضع ملء الشاشة دائماً مع أعلى الهاتف على الجانب الأيمن.";
+// Fullscreen Mode
+"FULLSCREEN_MODE" = "فرض اتجاه ملء الشاشة";
+"FULLSCREEN_MODE_DESC" = "دخول وضع ملء الشاشة دائماً مع زر/شريط الصفحة الرئيسية على الجانب الأيسر أو الأيمن.";
+"FULLSCREEN_OFF" = "إيقاف";
+"FULLSCREEN_LEFT" = "يسار";
+"FULLSCREEN_RIGHT" = "يمين";
 
 // A/B Testing Settings
 "ENABLE_IOS_FLOATING_MINIPLAYER" = "تعطيل مشغل مصغر عائم";
-"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "تعطيل المشغل المصغر العائم. يعيد الشريط السفلي.";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "يعيد المشغل المصغر الكلاسيكي بتعطيل علامة A/B: enableIosFloatingMiniplayer. يتطلب إعادة تشغيل التطبيق.";
 
 // Virtual Bezel
 "VIRTUAL_BEZEL" = "حواف الشاشة الكاملة الافتراضية";

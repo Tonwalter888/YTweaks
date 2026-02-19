@@ -1,0 +1,48 @@
+// Quit app alert
+"WARNING" = "Avertissement";
+"APPLY_DESC" = "Cette action va quitter YouTube. Voulez-vous vraiment continuer ?";
+
+// Fullscreen Mode
+"FULLSCREEN_MODE" = "Forcer la direction du plein écran";
+"FULLSCREEN_MODE_DESC" = "Toujours passer en plein écran avec le bouton/barre d'accueil à gauche ou à droite.";
+"FULLSCREEN_OFF" = "Désactivé";
+"FULLSCREEN_LEFT" = "Gauche";
+"FULLSCREEN_RIGHT" = "Droite";
+
+// A/B Testing Settings
+"ENABLE_IOS_FLOATING_MINIPLAYER" = "Désactiver le mini lecteur flottant";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Restaure le mini lecteur classique en désactivant l'option A/B enableIosFloatingMiniplayer. Redémarrage de l'app requis.";
+
+// Virtual Bezel
+"VIRTUAL_BEZEL" = "Cadres virtuels plein écran";
+"VIRTUAL_BEZEL_DESC" = "Ajoute des zones tactiles invisibles sur les bandes noires pour éviter les appuis et sauts accidentels. Pour iPhones sans bouton d'accueil.";
+
+// Hide AI Summaries (Experimental)
+"HIDE_AI_SUMMARIES" = "Masquer les résumés IA (Expérimental)";
+"HIDE_AI_SUMMARIES_DESC" = "Masque les boutons de résumé générés par l'IA sous les vidéos dans le fil. Fonction expérimentale.";
+
+// Fix Casting
+"FIX_CASTING" = "Corriger le cast";
+"FIX_CASTING_DESC" = "Tente de corriger le cast en modifiant certaines options A/B. Fonctionne uniquement en v20.10.4 ou antérieure";
+
+// Preferences Management
+"PREFERENCES_MANAGEMENT" = "Gestion des préférences";
+"IMPORT_PREFERENCES" = "Importer les préférences";
+"EXPORT_PREFERENCES" = "Exporter les préférences";
+"RESTORE_DEFAULTS" = "Restaurer les paramètres par défaut";
+"IMPORT_CONFIRM" = "Cela remplacera les préférences actuelles. Continuer ?";
+"RESTORE_CONFIRM" = "Cela réinitialisera tous les paramètres. Continuer ?";
+"IMPORT_SUCCESS" = "Préférences importées avec succès";
+"EXPORT_SUCCESS" = "Préférences exportées avec succès";
+"IMPORT_FAILED" = "Échec de l'import des préférences";
+"CANCEL" = "Annuler";
+"YES" = "Oui";
+
+// Night Mode
+"NIGHT_MODE" = "Mode nuit";
+"NIGHT_MODE_DESC" = "Assombrit l'écran sous la luminosité minimale en superposant un filtre sombre.";
+"NIGHT_MODE_OFF" = "Désactivé";
+"NIGHT_MODE_LOW" = "Faible";
+"NIGHT_MODE_MEDIUM" = "Moyen";
+"NIGHT_MODE_HIGH" = "Élevé";
+"NIGHT_MODE_MAXIMUM" = "Max";

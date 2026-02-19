@@ -1,0 +1,48 @@
+// Quit app alert
+"WARNING" = "Babala";
+"APPLY_DESC" = "Isasara ng aksyong ito ang YouTube. Sigurado ka bang gusto mong magpatuloy?";
+
+// Fullscreen Mode
+"FULLSCREEN_MODE" = "Pilitin ang Direksyon ng Full Screen";
+"FULLSCREEN_MODE_DESC" = "Laging pumasok sa full screen na naka-home button/bar sa kaliwa o kanan.";
+"FULLSCREEN_OFF" = "Off";
+"FULLSCREEN_LEFT" = "Kaliwa";
+"FULLSCREEN_RIGHT" = "Kanan";
+
+// A/B Testing Settings
+"ENABLE_IOS_FLOATING_MINIPLAYER" = "I-disable ang Floating Mini Player";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Ibinabalik ang classic mini player sa pag-disable ng A/B flag: enableIosFloatingMiniplayer. Kailangan i-restart ang app.";
+
+// Virtual Bezel
+"VIRTUAL_BEZEL" = "Virtual Full Screen Bezels";
+"VIRTUAL_BEZEL_DESC" = "Nagdadagdag ng invisible touch-safe zones sa black bars para maiwasan ang aksidenteng tap at skip. Para sa iPhone na walang home button.";
+
+// Hide AI Summaries (Experimental)
+"HIDE_AI_SUMMARIES" = "Itago ang AI Summaries (Experimental)";
+"HIDE_AI_SUMMARIES_DESC" = "Itinatago ang AI-generated summary buttons sa ilalim ng mga video sa feed. Experimental na feature.";
+
+// Fix Casting
+"FIX_CASTING" = "Ayusin ang Casting";
+"FIX_CASTING_DESC" = "Sinusubukang ayusin ang casting sa pagbabago ng ilang A/B flags. Gumagana lang sa v20.10.4 o mas mababa";
+
+// Preferences Management
+"PREFERENCES_MANAGEMENT" = "Pamamahala ng mga kagustuhan";
+"IMPORT_PREFERENCES" = "I-import ang mga kagustuhan";
+"EXPORT_PREFERENCES" = "I-export ang mga kagustuhan";
+"RESTORE_DEFAULTS" = "Ibalik ang default na mga setting";
+"IMPORT_CONFIRM" = "Papalitan nito ang kasalukuyang mga kagustuhan. Magpatuloy?";
+"RESTORE_CONFIRM" = "Ire-reset nito lahat ng mga setting. Magpatuloy?";
+"IMPORT_SUCCESS" = "Matagumpay na na-import ang mga kagustuhan";
+"EXPORT_SUCCESS" = "Matagumpay na na-export ang mga kagustuhan";
+"IMPORT_FAILED" = "Hindi na-import ang mga kagustuhan";
+"CANCEL" = "Kanselahin";
+"YES" = "Oo";
+
+// Night Mode
+"NIGHT_MODE" = "Night Mode";
+"NIGHT_MODE_DESC" = "Pinapadilim ang screen sa ibaba ng minimum brightness gamit ang dark filter.";
+"NIGHT_MODE_OFF" = "Off";
+"NIGHT_MODE_LOW" = "Mababa";
+"NIGHT_MODE_MEDIUM" = "Katamtaman";
+"NIGHT_MODE_HIGH" = "Mataas";
+"NIGHT_MODE_MAXIMUM" = "Max";

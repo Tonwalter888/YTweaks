@@ -2,17 +2,17 @@
 "WARNING" = "경고";
 "APPLY_DESC" = "이 작업은 YouTube를 종료합니다. 계속하시겠습니까?";
 
-// Fullscreen to the Right
-"FULLSCREEN_TO_THE_RIGHT" = "전체 화면 오른쪽으로";
-"FULLSCREEN_TO_THE_RIGHT_DESC" = "홈 버튼/바가 오른쪽에 오도록 항상 전체 화면으로 들어갑니다.";
+// Fullscreen Mode
+"FULLSCREEN_MODE" = "전체 화면 방향 강제";
+"FULLSCREEN_MODE_DESC" = "홈 버튼/바가 왼쪽 또는 오른쪽에 오도록 항상 전체 화면으로 들어갑니다.";
 
-// Fullscreen to the Left
-"FULLSCREEN_TO_THE_LEFT" = "전체 화면 왼쪽으로";
-"FULLSCREEN_TO_THE_LEFT_DESC" = "전화 상단이 오른쪽에 오도록 항상 전체 화면으로 들어갑니다.";
+"FULLSCREEN_OFF" = "끔";
+"FULLSCREEN_LEFT" = "왼쪽";
+"FULLSCREEN_RIGHT" = "오른쪽";
 
 // A/B Testing Settings
 "ENABLE_IOS_FLOATING_MINIPLAYER" = "플로팅 미니 플레이어 비활성화";
-"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "플로팅 미니 플레이어를 비활성화합니다. 하단 바를 복원합니다.";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "A/B 플래그 enableIosFloatingMiniplayer을 비활성화하여 클래식 미니 플레이어를 복원합니다. 앱 재시작이 필요합니다.";
 
 // Virtual Bezel
 "VIRTUAL_BEZEL" = "가상 전체 화면 베젤";

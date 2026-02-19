@@ -1,0 +1,48 @@
+// Quit app alert
+"WARNING" = "Upozornění";
+"APPLY_DESC" = "Tato akce ukončí YouTube. Opravdu chcete pokračovat?";
+
+// Fullscreen Mode
+"FULLSCREEN_MODE" = "Vynutit směr celé obrazovky";
+"FULLSCREEN_MODE_DESC" = "Vždy přejít na celou obrazovku s tlačítkem/lištou domů vlevo nebo vpravo.";
+"FULLSCREEN_OFF" = "Vypnuto";
+"FULLSCREEN_LEFT" = "Vlevo";
+"FULLSCREEN_RIGHT" = "Vpravo";
+
+// A/B Testing Settings
+"ENABLE_IOS_FLOATING_MINIPLAYER" = "Vypnout plovoucí mini přehrávač";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Obnoví klasický mini přehrávač vypnutím příznaku A/B enableIosFloatingMiniplayer. Vyžaduje restart aplikace.";
+
+// Virtual Bezel
+"VIRTUAL_BEZEL" = "Virtuální rámečky celé obrazovky";
+"VIRTUAL_BEZEL_DESC" = "Přidává neviditelné bezpečné zóny na černé pruhy, aby zabránil náhodným klepnutím a přeskakování. Pro iPhony bez tlačítka domů.";
+
+// Hide AI Summaries (Experimental)
+"HIDE_AI_SUMMARIES" = "Skrýt souhrny AI (Experimentální)";
+"HIDE_AI_SUMMARIES_DESC" = "Skryje tlačítka souhrnů generovaných AI pod videi ve výpisu. Experimentální funkce.";
+
+// Fix Casting
+"FIX_CASTING" = "Opravit přenos";
+"FIX_CASTING_DESC" = "Pokusí se opravit přenos změnou některých příznaků A/B. Funguje pouze ve verzi v20.10.4 nebo nižší";
+
+// Preferences Management
+"PREFERENCES_MANAGEMENT" = "Správa předvoleb";
+"IMPORT_PREFERENCES" = "Importovat předvolby";
+"EXPORT_PREFERENCES" = "Exportovat předvolby";
+"RESTORE_DEFAULTS" = "Obnovit výchozí nastavení";
+"IMPORT_CONFIRM" = "Tím se nahradí aktuální předvolby. Pokračovat?";
+"RESTORE_CONFIRM" = "Tím se obnoví všechna nastavení. Pokračovat?";
+"IMPORT_SUCCESS" = "Předvolby úspěšně importovány";
+"EXPORT_SUCCESS" = "Předvolby úspěšně exportovány";
+"IMPORT_FAILED" = "Import předvoleb se nezdařil";
+"CANCEL" = "Zrušit";
+"YES" = "Ano";
+
+// Night Mode
+"NIGHT_MODE" = "Noční režim";
+"NIGHT_MODE_DESC" = "Ztlumí obrazovku pod minimální jas překrytím tmavého filtru.";
+"NIGHT_MODE_OFF" = "Vypnuto";
+"NIGHT_MODE_LOW" = "Nízká";
+"NIGHT_MODE_MEDIUM" = "Střední";
+"NIGHT_MODE_HIGH" = "Vysoká";
+"NIGHT_MODE_MAXIMUM" = "Max";

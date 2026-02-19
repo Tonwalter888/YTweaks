@@ -2,17 +2,17 @@
 "WARNING" = "Avertizare";
 "APPLY_DESC" = "Această acțiune va închide YouTube. Sunteți sigur că doriți să continuați?";
 
-// Fullscreen to the Right
-"FULLSCREEN_TO_THE_RIGHT" = "Ecran complet spre dreapta";
-"FULLSCREEN_TO_THE_RIGHT_DESC" = "Intră întotdeauna în modul ecran complet cu butonul/barul de acasă în partea dreaptă.";
+// Fullscreen Mode
+"FULLSCREEN_MODE" = "Forțează direcția ecran complet";
+"FULLSCREEN_MODE_DESC" = "Intră întotdeauna în modul ecran complet cu butonul/bara de acasă în partea stângă sau dreaptă.";
 
-// Fullscreen to the Left
-"FULLSCREEN_TO_THE_LEFT" = "Ecran complet spre stânga";
-"FULLSCREEN_TO_THE_LEFT_DESC" = "Intră întotdeauna în modul ecran complet cu partea superioară a telefonului în partea dreaptă.";
+"FULLSCREEN_OFF" = "Oprit";
+"FULLSCREEN_LEFT" = "Stânga";
+"FULLSCREEN_RIGHT" = "Dreapta";
 
 // A/B Testing Settings
 "ENABLE_IOS_FLOATING_MINIPLAYER" = "Dezactivare miniplayer flotant";
-"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Dezactivează miniplayer-ul flotant. Restabilește bara de jos.";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Restabilește miniplayer-ul clasic prin dezactivarea parametrului A/B enableIosFloatingMiniplayer. Necesită repornirea aplicației.";
 
 // Virtual Bezel
 "VIRTUAL_BEZEL" = "Borduri virtuale ecran complet";
