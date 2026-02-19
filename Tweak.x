@@ -15,6 +15,55 @@
 // Storage for original method implementations
 NSMutableDictionary <NSString *, NSMutableDictionary <NSString *, NSNumber *> *> *abConfigCache;
 
+// Night mode overlay
+static UIView *nightModeOverlay = nil;
+
+static void ensureOverlayOnMainWindow(void) {
+    UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
+    if (!mainWindow) return;
+
+    if (!nightModeOverlay) {
+        nightModeOverlay = [[UIView alloc] initWithFrame:mainWindow.bounds];
+        nightModeOverlay.backgroundColor = [UIColor blackColor];
+        nightModeOverlay.alpha = 0.0;
+        nightModeOverlay.userInteractionEnabled = NO;
+        nightModeOverlay.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        nightModeOverlay.layer.zPosition = CGFLOAT_MAX;
+    }
+
+    if (nightModeOverlay.window != mainWindow) {
+        [nightModeOverlay removeFromSuperview];
+        [mainWindow addSubview:nightModeOverlay];
+    }
+}
+
+// nightMode_level: 0 = Off, 1 = Low, 2 = Medium, 3 = High, 4 = Maximum
+static void updateNightModeOverlay(void) {
+    if (![NSThread isMainThread]) {
+        dispatch_async(dispatch_get_main_queue(), ^{ updateNightModeOverlay(); });
+        return;
+    }
+
+    NSInteger level = [[NSUserDefaults standardUserDefaults] integerForKey:@"nightMode_level"];
+    CGFloat opacityValues[] = {0.0, 0.3, 0.5, 0.7, 0.9};
+    CGFloat opacity = (level >= 0 && level <= 4) ? opacityValues[level] : 0.0;
+
+    if (level > 0) {
+        ensureOverlayOnMainWindow();
+        if (nightModeOverlay) {
+            nightModeOverlay.hidden = NO;
+            [UIView animateWithDuration:0.3 animations:^{ nightModeOverlay.alpha = opacity; }];
+        }
+    } else if (nightModeOverlay) {
+        [UIView animateWithDuration:0.3 animations:^{
+            nightModeOverlay.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            if (finished) nightModeOverlay.hidden = YES;
+        }];
+    }
+}
+
+
 // Forward declaration for recursive summary finder
 static BOOL findSummaryInNodeController(id nodeController, NSArray <NSString *> *identifiers);
 
@@ -130,23 +179,31 @@ static void hookClass(NSObject *instance) {
     hookClass(coldConfig);
     hookClass(hotConfig);
     
+    [[NSNotificationCenter defaultCenter] addObserverForName:@"YTWKSNightModeChanged"
+        object:nil queue:[NSOperationQueue mainQueue]
+        usingBlock:^(NSNotification *note) { updateNightModeOverlay(); }];
+
+    // 3 second delay before applying setting on fresh launch
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)),
+        dispatch_get_main_queue(), ^{ updateNightModeOverlay(); });
+    
     return result;
 }
 
 %end
 
-// Fullscreen to the Right (iPhone-Exclusive) - @arichornlover & @bhackel
-// WARNING: Please turn off any "Portrait Fullscreen" or "iPad Layout" Options while "Fullscreen to the Right" is enabled.
+// Fullscreen Mode (iPhone-Exclusive) - @arichornlover & @bhackel
+// WARNING: Please turn off any "Portrait Fullscreen" or "iPad Layout" Options while Fullscreen Mode is enabled.
+// fullscreen_mode: 0 = Off, 1 = Left, 2 = Right
 %hook YTWatchViewController
 - (UIInterfaceOrientationMask)allowedFullScreenOrientations {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults boolForKey:@"fullscreenToTheRight_enabled"]) {
-        UIInterfaceOrientationMask orientations = UIInterfaceOrientationMaskLandscapeRight;
-        return orientations;
+    NSInteger fullscreenMode = [defaults integerForKey:@"fullscreen_mode"];
+    if (fullscreenMode == 1) {
+        return UIInterfaceOrientationMaskLandscapeLeft;
     }
-    if ([defaults boolForKey:@"fullscreenToTheLeft_enabled"]) {
-        UIInterfaceOrientationMask orientations = UIInterfaceOrientationMaskLandscapeLeft;
-        return orientations;
+    if (fullscreenMode == 2) {
+        return UIInterfaceOrientationMaskLandscapeRight;
     }
     return %orig;
 }

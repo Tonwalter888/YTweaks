@@ -38,3 +38,12 @@
 "IMPORT_FAILED" = "Gagal mengimpor preferensi";
 "CANCEL" = "Batal";
 "YES" = "Ya";
+
+// Night Mode
+"NIGHT_MODE" = "Mode Malam";
+"NIGHT_MODE_DESC" = "Meredupkan layar di bawah kecerahan minimum dengan melapisi filter gelap.";
+"NIGHT_MODE_OFF" = "Mati";
+"NIGHT_MODE_LOW" = "Rendah";
+"NIGHT_MODE_MEDIUM" = "Sedang";
+"NIGHT_MODE_HIGH" = "Tinggi";
+"NIGHT_MODE_MAXIMUM" = "Maks";

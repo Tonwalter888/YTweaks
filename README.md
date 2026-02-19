@@ -2,6 +2,7 @@
 
 Working features:
 - **Fullscreen to the right or left**: Locks fullscreen orientation.
+- **Night Mode**: Lowers brightness below device minimum by "faking it" with an app-wide semi-transparent black overlay. Works best on OLED devices.
 - **Disable floating miniplayer**: Restores the old miniplayer by disabling the floating miniplayer.
 - **Virtual fullscreen bezels**: Adds invisible touch-safe zones on black bars to prevent accidental taps and skips.
 - **Fix Casting** - Attempts to fix casting by changing some A/B flags. Only works on v20.10.4 or lower.

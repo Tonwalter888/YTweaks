@@ -38,3 +38,12 @@
 "IMPORT_FAILED" = "Nhập tùy chọn thất bại";
 "CANCEL" = "Hủy";
 "YES" = "Có";
+
+// Night Mode
+"NIGHT_MODE" = "Chế độ Ban đêm";
+"NIGHT_MODE_DESC" = "Làm mờ màn hình dưới độ sáng tối thiểu bằng cách phủ bộ lọc tối.";
+"NIGHT_MODE_OFF" = "Tắt";
+"NIGHT_MODE_LOW" = "Thấp";
+"NIGHT_MODE_MEDIUM" = "TB";
+"NIGHT_MODE_HIGH" = "Cao";
+"NIGHT_MODE_MAXIMUM" = "Max";

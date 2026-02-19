@@ -38,3 +38,12 @@
 "IMPORT_FAILED" = "Не удалось импортировать настройки";
 "CANCEL" = "Отмена";
 "YES" = "Да";
+
+// Night Mode
+"NIGHT_MODE" = "Ночной режим";
+"NIGHT_MODE_DESC" = "Затемняет экран ниже минимальной яркости с помощью тёмного фильтра.";
+"NIGHT_MODE_OFF" = "Выкл";
+"NIGHT_MODE_LOW" = "Низкий";
+"NIGHT_MODE_MEDIUM" = "Средний";
+"NIGHT_MODE_HIGH" = "Высокий";
+"NIGHT_MODE_MAXIMUM" = "Макс";

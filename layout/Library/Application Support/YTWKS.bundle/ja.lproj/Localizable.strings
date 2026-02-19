@@ -38,3 +38,12 @@
 "IMPORT_FAILED" = "設定のインポートに失敗しました";
 "CANCEL" = "キャンセル";
 "YES" = "はい";
+
+// Night Mode
+"NIGHT_MODE" = "ナイトモード";
+"NIGHT_MODE_DESC" = "暗いフィルターを重ねて、最小輝度以下に画面を暗くします。";
+"NIGHT_MODE_OFF" = "オフ";
+"NIGHT_MODE_LOW" = "低";
+"NIGHT_MODE_MEDIUM" = "中";
+"NIGHT_MODE_HIGH" = "高";
+"NIGHT_MODE_MAXIMUM" = "最大";

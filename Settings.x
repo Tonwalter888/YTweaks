@@ -148,31 +148,27 @@ NSBundle *YTWKSBundle() {
         }];
     [sectionItems addObject:restoreDefaults];
 
-    // Fullscreen to the Right
-    YTSettingsSectionItem *fullscreenToRight = [YTSettingsSectionItemClass switchItemWithTitle:LOC(@"FULLSCREEN_TO_THE_RIGHT")
-        titleDescription:LOC(@"FULLSCREEN_TO_THE_RIGHT_DESC")
-        accessibilityIdentifier:nil
-        switchOn:[defaults boolForKey:@"fullscreenToTheRight_enabled"]
-        switchBlock:^BOOL (YTSettingsCell *cell, BOOL enabled) {
-            [defaults setBool:enabled forKey:@"fullscreenToTheRight_enabled"];
-            [defaults synchronize];
-            return YES;
-        }
-        settingItemId:0];
-    [sectionItems addObject:fullscreenToRight];
+    // Fullscreen Mode with segmented control (Off | Left | Right)
+    // Level 0 = Off, 1 = Left, 2 = Right
+    YTSettingsSectionItem *fullscreenMode = [YTSettingsSectionItemClass itemWithTitle:LOC(@"FULLSCREEN_MODE")
+        titleDescription:LOC(@"FULLSCREEN_MODE_DESC")
+        accessibilityIdentifier:@"fullscreenModeSegment"
+        detailTextBlock:nil
+        selectBlock:^BOOL (YTSettingsCell *cell, NSUInteger arg1) {
+            return NO; // Non-interactive - segmented control handles selection
+        }];
+    [sectionItems addObject:fullscreenMode];
 
-    // Fullscreen to the Left
-    YTSettingsSectionItem *fullscreenToLeft = [YTSettingsSectionItemClass switchItemWithTitle:LOC(@"FULLSCREEN_TO_THE_LEFT")
-        titleDescription:LOC(@"FULLSCREEN_TO_THE_LEFT_DESC")
-        accessibilityIdentifier:nil
-        switchOn:[defaults boolForKey:@"fullscreenToTheLeft_enabled"]
-        switchBlock:^BOOL (YTSettingsCell *cell, BOOL enabled) {
-            [defaults setBool:enabled forKey:@"fullscreenToTheLeft_enabled"];
-            [defaults synchronize];
-            return YES;
-        }
-        settingItemId:1];
-    [sectionItems addObject:fullscreenToLeft];
+    // Night Mode with segmented control (Off | Low | Medium | High | Maximum)
+    // Level 0 = Off, 1 = Low (0.3), 2 = Medium (0.5), 3 = High (0.7), 4 = Maximum (0.9)
+    YTSettingsSectionItem *nightMode = [YTSettingsSectionItemClass itemWithTitle:LOC(@"NIGHT_MODE")
+        titleDescription:LOC(@"NIGHT_MODE_DESC")
+        accessibilityIdentifier:@"nightModeSegment"
+        detailTextBlock:nil
+        selectBlock:^BOOL (YTSettingsCell *cell, NSUInteger arg1) {
+            return NO; // Non-interactive - segmented control handles selection
+        }];
+    [sectionItems addObject:nightMode];
 
     // A/B settings: Disable Floating Miniplayer
     // YouTube's A/B flag: enableIosFloatingMiniplayer (YES = enabled, NO = disabled)
@@ -233,7 +229,7 @@ NSBundle *YTWKSBundle() {
     [sectionItems addObject:hideAISummaries];
 
     // Version number footer (at the bottom)
-    #define TWEAK_VERSION 0.3.3
+    #define TWEAK_VERSION 0.4.0
     #define STRINGIFY(x) #x
     #define TOSTRING(x) STRINGIFY(x)
     NSString *versionString = [NSString stringWithFormat:@"YTweaks v%s", TOSTRING(TWEAK_VERSION)];
@@ -283,12 +279,12 @@ NSBundle *YTWKSBundle() {
     // Filter only YTweaks keys
     NSMutableDictionary *ytweaksPrefs = [NSMutableDictionary dictionary];
     for (NSString *key in prefs) {
-        if ([key hasPrefix:@"fullscreenToTheRight"] || 
-            [key hasPrefix:@"fullscreenToTheLeft"] || 
+        if ([key hasPrefix:@"fullscreen_mode"] || 
             [key hasPrefix:@"enable"] ||
             [key hasPrefix:@"virtualBezel"] ||
             [key hasPrefix:@"hideAISummaries"] ||
-            [key hasPrefix:@"fixCasting"]) {
+            [key hasPrefix:@"fixCasting"] ||
+            [key hasPrefix:@"nightMode"]) {
             ytweaksPrefs[key] = prefs[key];
         }
     }
@@ -341,6 +337,9 @@ NSBundle *YTWKSBundle() {
         }
         [defaults synchronize];
         
+        // Update night mode overlay after importing
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"YTWKSNightModeChanged" object:nil];
+        
         // Show success message
         NSString *successMsg = [bundle localizedStringForKey:@"IMPORT_SUCCESS" value:nil table:nil];
         [[%c(YTToastResponderEvent) eventWithMessage:successMsg 
@@ -354,17 +353,20 @@ NSBundle *YTWKSBundle() {
 
 %new
 - (void)restoreDefaults {
-    NSArray *keys = @[@"fullscreenToTheRight_enabled", 
-                      @"fullscreenToTheLeft_enabled", 
+    NSArray *keys = @[@"fullscreen_mode", 
                       @"enableIosFloatingMiniplayer",
                       @"virtualBezel_enabled",
                       @"hideAISummaries_enabled",
-                      @"fixCasting_enabled"];
+                      @"fixCasting_enabled",
+                      @"nightMode_level"];
     
     for (NSString *key in keys) {
         [defaults removeObjectForKey:key];
     }
     [defaults synchronize];
+    
+    // Update night mode overlay after restoring defaults
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"YTWKSNightModeChanged" object:nil];
 }
 
 %end
@@ -374,23 +376,116 @@ NSBundle *YTWKSBundle() {
 - (void)layoutSubviews {
     %orig;
     
-    // Make the preferences management header smaller and non-clickable
-    // Identify the header by searching for the localized text
     NSBundle *bundle = YTWKSBundle();
+    
+    // Night Mode segmented control
+    if ([self.accessibilityIdentifier isEqualToString:@"nightModeSegment"]) {
+        UISegmentedControl *segment = [self.contentView viewWithTag:888888];
+        if (!segment) {
+            NSArray *items = @[
+                [bundle localizedStringForKey:@"NIGHT_MODE_OFF" value:@"Off" table:nil],
+                [bundle localizedStringForKey:@"NIGHT_MODE_LOW" value:@"Low" table:nil],
+                [bundle localizedStringForKey:@"NIGHT_MODE_MEDIUM" value:@"Medium" table:nil],
+                [bundle localizedStringForKey:@"NIGHT_MODE_HIGH" value:@"High" table:nil],
+                [bundle localizedStringForKey:@"NIGHT_MODE_MAXIMUM" value:@"Maximum" table:nil]
+            ];
+            segment = [[UISegmentedControl alloc] initWithItems:items];
+            segment.tag = 888888;
+            segment.selectedSegmentIndex = [defaults integerForKey:@"nightMode_level"];
+            [segment addTarget:self action:@selector(nightModeSegmentChanged:) forControlEvents:UIControlEventValueChanged];
+            
+            // Style for dark mode
+            segment.backgroundColor = [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1.0];
+            if (@available(iOS 13.0, *)) {
+                segment.selectedSegmentTintColor = [UIColor colorWithRed:0.4 green:0.4 blue:0.4 alpha:1.0];
+            }
+            [segment setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]} forState:UIControlStateNormal];
+            [segment setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]} forState:UIControlStateSelected];
+            
+            // Use smaller font to fit all options
+            UIFont *smallFont = [UIFont systemFontOfSize:11.0 weight:UIFontWeightMedium];
+            [segment setTitleTextAttributes:@{NSFontAttributeName: smallFont, NSForegroundColorAttributeName: [UIColor whiteColor]} forState:UIControlStateNormal];
+            [segment setTitleTextAttributes:@{NSFontAttributeName: smallFont, NSForegroundColorAttributeName: [UIColor whiteColor]} forState:UIControlStateSelected];
+            
+            segment.translatesAutoresizingMaskIntoConstraints = NO;
+            [self.contentView addSubview:segment];
+            
+            // Position below the title with constraints
+            [NSLayoutConstraint activateConstraints:@[
+                [segment.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:16],
+                [segment.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:-16],
+                [segment.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor constant:-12],
+                [segment.heightAnchor constraintEqualToConstant:32]
+            ]];
+        } else {
+            // Update selection if it changed externally
+            NSInteger currentLevel = [defaults integerForKey:@"nightMode_level"];
+            if (segment.selectedSegmentIndex != currentLevel) {
+                segment.selectedSegmentIndex = currentLevel;
+            }
+        }
+        return;
+    }
+    
+    // Fullscreen Mode segmented control (Off | Left | Right)
+    if ([self.accessibilityIdentifier isEqualToString:@"fullscreenModeSegment"]) {
+        UISegmentedControl *segment = [self.contentView viewWithTag:888889];
+        if (!segment) {
+            NSArray *items = @[
+                [bundle localizedStringForKey:@"FULLSCREEN_OFF" value:@"Off" table:nil],
+                [bundle localizedStringForKey:@"FULLSCREEN_LEFT" value:@"Left" table:nil],
+                [bundle localizedStringForKey:@"FULLSCREEN_RIGHT" value:@"Right" table:nil]
+            ];
+            segment = [[UISegmentedControl alloc] initWithItems:items];
+            segment.tag = 888889;
+            segment.selectedSegmentIndex = [defaults integerForKey:@"fullscreen_mode"];
+            [segment addTarget:self action:@selector(fullscreenModeSegmentChanged:) forControlEvents:UIControlEventValueChanged];
+            
+            // Style for dark mode
+            segment.backgroundColor = [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1.0];
+            if (@available(iOS 13.0, *)) {
+                segment.selectedSegmentTintColor = [UIColor colorWithRed:0.4 green:0.4 blue:0.4 alpha:1.0];
+            }
+            [segment setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]} forState:UIControlStateNormal];
+            [segment setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]} forState:UIControlStateSelected];
+            
+            // Standard font size (fewer options than night mode)
+            UIFont *font = [UIFont systemFontOfSize:13.0 weight:UIFontWeightMedium];
+            [segment setTitleTextAttributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: [UIColor whiteColor]} forState:UIControlStateNormal];
+            [segment setTitleTextAttributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: [UIColor whiteColor]} forState:UIControlStateSelected];
+            
+            segment.translatesAutoresizingMaskIntoConstraints = NO;
+            [self.contentView addSubview:segment];
+            
+            // Position below the title with constraints
+            [NSLayoutConstraint activateConstraints:@[
+                [segment.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:16],
+                [segment.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:-16],
+                [segment.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor constant:-12],
+                [segment.heightAnchor constraintEqualToConstant:32]
+            ]];
+        } else {
+            // Update selection if it changed externally
+            NSInteger currentMode = [defaults integerForKey:@"fullscreen_mode"];
+            if (segment.selectedSegmentIndex != currentMode) {
+                segment.selectedSegmentIndex = currentMode;
+            }
+        }
+        return;
+    }
+    
+    // Make the preferences management header smaller and non-clickable
     NSString *headerText = [bundle localizedStringForKey:@"PREFERENCES_MANAGEMENT" value:nil table:nil];
     
-    // Search for the header text in the cell's labels
     BOOL isHeaderCell = NO;
     UILabel *titleLabel = nil;
     
     @try {
-        // Try to get title label directly
         titleLabel = [self valueForKey:@"_titleLabel"];
         if (!titleLabel) {
             titleLabel = [self valueForKey:@"titleLabel"];
         }
         
-        // If not found, search subviews
         if (!titleLabel) {
             for (UIView *subview in self.contentView.subviews) {
                 if ([subview isKindOfClass:[UILabel class]]) {
@@ -407,25 +502,32 @@ NSBundle *YTWKSBundle() {
         }
         
         if (isHeaderCell && titleLabel) {
-            // Disable user interaction
             self.userInteractionEnabled = NO;
-            
-            // Make text smaller
             titleLabel.font = [UIFont systemFontOfSize:13.0 weight:UIFontWeightSemibold];
         }
         
         // Style version footer (smaller, lighter)
         NSString *versionPrefix = @"YTweaks ";
         if (titleLabel && [titleLabel.text hasPrefix:versionPrefix]) {
-            // Disable user interaction
             self.userInteractionEnabled = NO;
-            
-            // Make text smaller, light weight
             titleLabel.font = [UIFont systemFontOfSize:13.0 weight:UIFontWeightLight];
         }
     } @catch (NSException *e) {
         // Couldn't access properties
     }
+}
+
+%new
+- (void)nightModeSegmentChanged:(UISegmentedControl *)sender {
+    [defaults setInteger:sender.selectedSegmentIndex forKey:@"nightMode_level"];
+    [defaults synchronize];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"YTWKSNightModeChanged" object:nil];
+}
+
+%new
+- (void)fullscreenModeSegmentChanged:(UISegmentedControl *)sender {
+    [defaults setInteger:sender.selectedSegmentIndex forKey:@"fullscreen_mode"];
+    [defaults synchronize];
 }
 
 %end

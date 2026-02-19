@@ -38,3 +38,12 @@
 "IMPORT_FAILED" = "A beállítások importálása sikertelen";
 "CANCEL" = "Mégse";
 "YES" = "Igen";
+
+// Night Mode
+"NIGHT_MODE" = "Éjszakai mód";
+"NIGHT_MODE_DESC" = "Sötét szűrő rétegezésével csökkenti a képernyő fényerejét a minimum alá.";
+"NIGHT_MODE_OFF" = "Ki";
+"NIGHT_MODE_LOW" = "Alacsony";
+"NIGHT_MODE_MEDIUM" = "Közepes";
+"NIGHT_MODE_HIGH" = "Magas";
+"NIGHT_MODE_MAXIMUM" = "Max";

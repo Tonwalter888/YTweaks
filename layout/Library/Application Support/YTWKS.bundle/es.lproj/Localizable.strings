@@ -38,3 +38,12 @@
 "IMPORT_FAILED" = "Error al importar preferencias";
 "CANCEL" = "Cancelar";
 "YES" = "Sí";
+
+// Night Mode
+"NIGHT_MODE" = "Modo nocturno";
+"NIGHT_MODE_DESC" = "Oscurece la pantalla por debajo del brillo mínimo superponiendo un filtro oscuro.";
+"NIGHT_MODE_OFF" = "No";
+"NIGHT_MODE_LOW" = "Bajo";
+"NIGHT_MODE_MEDIUM" = "Medio";
+"NIGHT_MODE_HIGH" = "Alto";
+"NIGHT_MODE_MAXIMUM" = "Máx";

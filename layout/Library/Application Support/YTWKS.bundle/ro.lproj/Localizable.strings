@@ -38,3 +38,12 @@
 "IMPORT_FAILED" = "Importarea preferințelor a eșuat";
 "CANCEL" = "Anulează";
 "YES" = "Da";
+
+// Night Mode
+"NIGHT_MODE" = "Mod Noapte";
+"NIGHT_MODE_DESC" = "Întunecă ecranul sub luminozitatea minimă prin suprapunerea unui filtru întunecat.";
+"NIGHT_MODE_OFF" = "Oprit";
+"NIGHT_MODE_LOW" = "Scăzut";
+"NIGHT_MODE_MEDIUM" = "Mediu";
+"NIGHT_MODE_HIGH" = "Ridicat";
+"NIGHT_MODE_MAXIMUM" = "Max";

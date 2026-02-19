@@ -2,20 +2,19 @@
 "WARNING" = "Warning";
 "APPLY_DESC" = "This action will quit YouTube. Are you sure you want to continue?";
 
-// Fullscreen to the Right
-"FULLSCREEN_TO_THE_RIGHT" = "Fullscreen to the Right";
-"FULLSCREEN_TO_THE_RIGHT_DESC" = "Always enter fullscreen with home button/bar on the right side.";
-
-// Fullscreen to the Left
-"FULLSCREEN_TO_THE_LEFT" = "Fullscreen to the Left";
-"FULLSCREEN_TO_THE_LEFT_DESC" = "Always enter fullscreen with top of phone on the right side.";
+// Fullscreen Mode
+"FULLSCREEN_MODE" = "Force Fullscreen Direction";
+"FULLSCREEN_MODE_DESC" = "Always enter fullscreen with home button/bar on the left/right side.";
+"FULLSCREEN_OFF" = "Off";
+"FULLSCREEN_LEFT" = "Left";
+"FULLSCREEN_RIGHT" = "Right";
 
 // A/B Testing Settings
 "ENABLE_IOS_FLOATING_MINIPLAYER" = "Disable Floating Miniplayer";
 "ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Brings back the classic miniplayer by disabling A/B flag: enableIosFloatingMiniplayer. Requires app restart.";
 
 // Virtual Bezel
-"VIRTUAL_BEZEL" = "Virtual fullscreen bezels";
+"VIRTUAL_BEZEL" = "Virtual Fullscreen Bezels";
 "VIRTUAL_BEZEL_DESC" = "Adds invisible touch-safe zones on black bars to prevent accidental taps and skips. Meant for iPhones with no home button.";
 
 // Hide AI Summaries (Experimental)
@@ -38,3 +37,12 @@
 "IMPORT_FAILED" = "Failed to import preferences";
 "CANCEL" = "Cancel";
 "YES" = "Yes";
+
+// Night Mode
+"NIGHT_MODE" = "Night Mode";
+"NIGHT_MODE_DESC" = "Dims the screen below minimum brightness by overlaying a dark filter.";
+"NIGHT_MODE_OFF" = "Off";
+"NIGHT_MODE_LOW" = "Low";
+"NIGHT_MODE_MEDIUM" = "Medium";
+"NIGHT_MODE_HIGH" = "High";
+"NIGHT_MODE_MAXIMUM" = "Max";

@@ -38,3 +38,12 @@
 "IMPORT_FAILED" = "Tercihler içe aktarılamadı";
 "CANCEL" = "İptal";
 "YES" = "Evet";
+
+// Night Mode
+"NIGHT_MODE" = "Gece Modu";
+"NIGHT_MODE_DESC" = "Koyu bir filtre kaplayarak ekranı minimum parlaklığın altına karartır.";
+"NIGHT_MODE_OFF" = "Kapalı";
+"NIGHT_MODE_LOW" = "Düşük";
+"NIGHT_MODE_MEDIUM" = "Orta";
+"NIGHT_MODE_HIGH" = "Yüksek";
+"NIGHT_MODE_MAXIMUM" = "Maks";

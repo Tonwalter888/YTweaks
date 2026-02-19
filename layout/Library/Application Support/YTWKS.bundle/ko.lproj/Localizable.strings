@@ -38,3 +38,12 @@
 "IMPORT_FAILED" = "환경 설정 가져오기 실패";
 "CANCEL" = "취소";
 "YES" = "예";
+
+// Night Mode
+"NIGHT_MODE" = "야간 모드";
+"NIGHT_MODE_DESC" = "어두운 필터를 오버레이하여 최소 밝기 이하로 화면을 어둡게 합니다.";
+"NIGHT_MODE_OFF" = "끔";
+"NIGHT_MODE_LOW" = "낮음";
+"NIGHT_MODE_MEDIUM" = "중간";
+"NIGHT_MODE_HIGH" = "높음";
+"NIGHT_MODE_MAXIMUM" = "최대";
